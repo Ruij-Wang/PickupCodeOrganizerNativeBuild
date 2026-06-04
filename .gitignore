@@ -1,0 +1,17 @@
+.gradle/
+.idea/
+.kotlin/
+.claude/
+build/
+captures/
+local.properties
+*.iml
+*.apk
+*.log
+*.gguf
+*.zip
+
+app/build/
+app/schemas/
+vendor/llama.cpp/examples/llama.android/**/.cxx/
+vendor/llama.cpp/examples/llama.android/**/build/
