@@ -189,7 +189,7 @@ private fun PickupHomeScreen(viewModel: PickupViewModel, onOpen: (PickupItemEnti
         if (pickupItems.isEmpty()) {
             item {
                 EmptyState(onCreateSample = {
-                    viewModel.saveSample("您的京东快递已到132号中山大学明德园6号菜鸟驿站京东点，请凭提货号6-2230前往领取")
+                    viewModel.saveSample("您的京东快递已到xx大学xx园x号菜鸟驿站京东点，请凭提货号A-1024前往领取")
                 })
             }
         } else {
@@ -470,7 +470,7 @@ private fun SettingsScreen(viewModel: PickupViewModel) {
         if (uri != null) viewModel.importModel(uri)
     }
     var sample by remember {
-        mutableStateOf("您的京东快递已到132号中山大学明德园6号菜鸟驿站京东点，请凭提货号6-2230前往领取")
+        mutableStateOf("您的京东快递已到xx大学xx园x号菜鸟驿站京东点，请凭提货号A-1024前往领取")
     }
 
     LazyColumn(
@@ -482,7 +482,7 @@ private fun SettingsScreen(viewModel: PickupViewModel) {
         item {
             PlainPanel(
                 title = "抽取引擎",
-                body = "当前模式：${modelStatus.modeLabel}\n状态：${modelStatus.engineState}\n模型：${modelStatus.modelFileName ?: "未导入"}${modelStatus.modelFileBytes?.let { "\n大小：${formatBytes(it)}" } ?: ""}${modelStatus.lastError?.let { "\n错误：$it" } ?: ""}\n说明：模型不会随 App 启动自动加载，只有点击加载或模型分析时才启动推理引擎。"
+                body = "当前模式：${modelStatus.modeLabel}\n状态：${modelStatus.engineState}\n模型：${modelStatus.modelFileName ?: "未导入"}${modelStatus.modelFileBytes?.let { "\n大小：${formatBytes(it)}" } ?: ""}${modelStatus.lastError?.let { "\n错误：$it" } ?: ""}\n说明：导入后可立即手动加载；重新启动 App 时会检测已导入模型并尝试加载。推理只在模型分析或规则置信度不足时触发。"
             )
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.padding(top = 8.dp)) {
                 Button(onClick = { importModel.launch(arrayOf("*/*")) }) { Text("导入模型") }
