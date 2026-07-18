@@ -10,7 +10,7 @@
 |---|---|
 | ![取件码整理助手取件台，展示京东取件码、驿站和待取状态](docs/screenshots/pickup-home.png) | ![采集诊断页，展示通知访问状态与京东原始通知](docs/screenshots/pickup-capture.png) |
 | **设置：端侧模型已导入并加载** | **规则实验室：查看结构化解析结果** |
-| ![设置页，展示本地 GGUF 模型已加载及监听白名单](docs/screenshots/pickup-local-model.jpg) | ![规则实验室，展示驿站、取件码和置信度解析结果](docs/screenshots/pickup-rule-analysis.png) |
+| ![设置页，展示本地 GGUF 模型已加载及监听白名单](docs/screenshots/pickup-local-model.png) | ![规则实验室，展示驿站、取件码和置信度解析结果](docs/screenshots/pickup-rule-analysis.png) |
 
 ## 产品问题
 
